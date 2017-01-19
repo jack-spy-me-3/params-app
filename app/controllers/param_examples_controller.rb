@@ -10,4 +10,13 @@ class ParamExamplesController < ApplicationController
     @message = params[:this_is_a_wildcard]
     render "url_segment_params_page.html.erb"
   end
+
+  def form_params_method
+    render "form.html.erb"
+  end
+
+  def form_result_method
+    @message = params[:form_message]
+    render "form_result.html.erb"
+  end
 end
